@@ -7,4 +7,5 @@ class test_functions(unittest.TestCase):
 
     def test_can_get_default_www_path(self):
         expected_result = "/var/www/html"
-        self.assertEquals(expected_result, get_www())
+        os_name = 'posix'
+        self.assertEqual(expected_result, get_www(os_name))
